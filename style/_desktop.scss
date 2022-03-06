@@ -1,0 +1,130 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100vh;
+}
+/* ============================================ */
+/*                      TOP                     */
+/* ============================================ */
+.top {
+  width: 100%;
+
+  background-image: url(../images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+// .top-input
+.top-input {
+  width: 90%;
+  max-width: 600px;
+  min-width: 250px;
+
+  h2 {
+    text-align: center;
+    color: white;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 500;
+    padding: 1rem;
+  }
+
+  .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    input {
+      width: 100%;
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+      padding-right: 3.5rem;
+    }
+
+    button {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+
+      padding: 1.2rem 0.8rem;
+      width: 50px;
+      // height: calc(40px + 0.9rem);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      border-radius: 0 10px 10px 0;
+      background: black;
+
+      &:hover {
+        background: rgb(52, 50, 50);
+      }
+    }
+  }
+}
+
+// .top-output
+.top-output {
+  z-index: 2;
+  width: 90%;
+  max-width: 1280px;
+
+  margin-top: -3rem;
+  transform: translateY(50%);
+  padding: 2rem 2rem;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.252);
+
+  .output-block {
+    border-right: 1px solid black;
+    padding-right: 1rem;
+
+    h3 {
+      color: #959393;
+      font-weight: 600;
+    }
+
+    strong {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    }
+  }
+
+  .output-block:nth-of-type(4) {
+    border-right: none;
+  }
+}
+
+/* ============================================ */
+/*                     .MAP                     */
+/* ============================================ */
+#map {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
